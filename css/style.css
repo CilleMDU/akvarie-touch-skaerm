@@ -298,4 +298,231 @@ header {
     height: 50px;
     font-size: 28px;
   }
+
+#puffish {
+  position: absolute;
+  bottom: 20vh;
+  width: 100px;
+  max-width: 28vw;
+  z-index: 2;
+  right: calc(-1 * 200px);
+  animation: puffer 7s linear infinite;
+  cursor: pointer
+}
+
+@keyframes puffer {
+   0% {transform: translateX(0) ;}
+   90%,
+   100% { transform: translateX(calc(-140vw - 200px));
+   }
+}
+
+#tuxfish {
+  position: absolute;
+  bottom: 15vh;
+  width: 180px;
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * 200px);
+  animation: tuxedo 10s linear infinite;
+  cursor: pointer
+}
+
+@keyframes tuxedo {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(100vw + 200px));
+   }
+}
+
+#bpfish {
+  position: absolute;
+  bottom: 5vh;
+  width: 200px;
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * 200px);
+  animation: bluepink 12s linear infinite;
+  cursor: pointer
+}
+
+@keyframes bluepink {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(100vw + 200px));
+   }
+}
+
+#ogfish {
+  position: absolute;
+  bottom: 30vh;
+  width: 200px;
+  max-width: 28vw;
+  z-index: 2;
+  right: calc(-1 * 200px);
+  animation: orangefish 8s linear infinite;
+  cursor: pointer
+}
+
+@keyframes orangefish {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(-140vw + 200px));
+   }
+}
+
+#bgimage {
+   position: absolute;
+   z-index: 1;
+   inset: auto 0 0 0; /* inset egenskaben undersÃ¸ger den studerende  */
+   width: 100%;
+   height: 100%;
+   background: url(../img/bg-done.png);
+   background-size: 100vw auto;
+   background-repeat: repeat-x;
+}
+
+#puffish2 {
+  position: absolute;
+  bottom: 60vh;
+  width: 100px;
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * 200px);
+  animation: puffer2 7s linear infinite;
+  cursor: pointer
+}
+
+@keyframes puffer2 {
+   0% {transform: translateX(0) rotateY(180deg);}
+   90%,
+   100% { transform: translateX(calc(140vw + 200px)) rotateY(180deg);
+   }
+}
+
+#tuxfish2 {
+  position: absolute;
+  bottom: 15vh;
+  width: 180px;
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * 200px);
+  animation: tuxedo2 10s linear infinite;
+  cursor: pointer
+}
+
+@keyframes tuxedo2 {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(100vw + 200px));
+   }
+}
+
+#bpfish2 {
+  position: absolute;
+  bottom: 5vh;
+  width: 200px;
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * 200px);
+  animation: bluepink2 12s linear infinite;
+  cursor: pointer
+}
+
+@keyframes bluepink2 {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(100vw + 200px));
+   }
+}
+
+#ogfish2 {
+  position: absolute;
+  bottom: 30vh;
+  width: 200px;
+  max-width: 28vw;
+  z-index: 2;
+  right: calc(-1 * 200px);
+  animation: orangefish2 8s linear infinite;
+  cursor: pointer
+}
+
+@keyframes orangefish2 {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(-140vw + 200px));
+   }
+}
+
+
+#puffish3 {
+  position: absolute;
+  bottom: 20vh;
+  width: 100px;
+  max-width: 28vw;
+  z-index: 2;
+  right: calc(-1 * 200px);
+  animation: puffer3 7s linear infinite;
+  cursor: pointer
+}
+
+@keyframes puffer3 {
+   0% {transform: translateX(0) ;}
+   90%,
+   100% { transform: translateX(calc(-140vw - 200px));
+   }
+}
+
+#tuxfish3 {
+  position: absolute;
+  bottom: 15vh;
+  width: 180px;
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * 200px);
+  animation: tuxedo3 10s linear infinite;
+  cursor: pointer
+}
+
+@keyframes tuxedo3 {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(100vw + 200px));
+   }
+}
+
+#bpfish3 {
+  position: absolute;
+  bottom: 5vh;
+  width: 200px;
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * 200px);
+  animation: bluepink3 12s linear infinite;
+  cursor: pointer
+}
+
+@keyframes bluepink3 {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(100vw + 200px));
+   }
+}
+
+#ogfish3 {
+  position: absolute;
+  bottom: 30vh;
+  width: 200px;
+  max-width: 28vw;
+  z-index: 2;
+  right: calc(-1 * 200px);
+  animation: orangefish3 8s linear infinite;
+  cursor: pointer
+}
+
+@keyframes orangefish3 {
+   0% {transform: translateX(0);}
+   90%,
+   100% { transform: translateX(calc(-140vw + 200px));
+   }
 }
