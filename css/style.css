@@ -259,6 +259,7 @@ header {
     height: 50px;
     font-size: 28px;
   }
+
 }
 
 #puffish {
@@ -266,7 +267,7 @@ header {
   bottom: 35vh;
   width: 150px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   right: calc(-1 * 200px);
   animation: puffer 7s linear infinite;
   cursor: pointer;
@@ -287,7 +288,7 @@ header {
   bottom: 20vh;
   width: 300px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   left: calc(-1 * 200px);
   animation: tuxedo 12s linear infinite;
   cursor: pointer;
@@ -308,7 +309,7 @@ header {
   bottom: 5vh;
   width: 250px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   left: calc(-1 * 200px);
   animation: bluepink 12s linear infinite;
   cursor: pointer;
@@ -329,7 +330,7 @@ header {
   bottom: 12vh;
   width: 200px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   right: calc(-1 * 200px);
   animation: orangefish 14s linear infinite;
   cursor: pointer;
@@ -345,12 +346,33 @@ header {
   }
 }
 
+#seahorse {
+  position: absolute;
+  bottom: 35vh;
+  width: 90px;
+  max-width: 28vw;
+  z-index: 4;
+  left: calc(-1 * 200px);
+  animation: seahorse 13s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes seahorse {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(140vw + 200px));
+  }
+}
+
 #puffish2 {
   position: absolute;
   bottom: 60vh;
   width: 180px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   left: calc(-1 * 200px);
   animation: puffer2 10s linear infinite;
   cursor: pointer;
@@ -371,7 +393,7 @@ header {
   bottom: 55vh;
   width: 250px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   right: calc(-1 * 200px);
   animation: tuxedo2 13s linear infinite;
   cursor: pointer;
@@ -392,7 +414,7 @@ header {
   bottom: 40vh;
   width: 300px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   right: calc(-1 * 200px);
   animation: bluepink2 14s linear infinite;
   cursor: pointer;
@@ -413,10 +435,31 @@ header {
   bottom: 30vh;
   width: 275px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   left: calc(-1 * 200px);
   animation: orangefish2 8s linear infinite;
   cursor: pointer;
+}
+
+#seahorse2 {
+  position: absolute;
+  bottom: 80vh;
+  width: 50px;
+  max-width: 28vw;
+  z-index: 4;
+  right: calc(-1 * 200px);
+  animation: seahorse2 7s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes seahorse2 {
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-140vw - 200px)) rotateY(180deg);
+  }
 }
 
 @keyframes orangefish2 {
@@ -434,7 +477,7 @@ header {
   bottom: 4vh;
   width: 165px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   right: calc(-1 * 200px);
   animation: puffer3 9s linear infinite;
   cursor: pointer;
@@ -455,7 +498,7 @@ header {
   bottom: 10vh;
   width: 220px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   left: calc(-1 * 200px);
   animation: tuxedo3 9s linear infinite;
   cursor: pointer;
@@ -476,7 +519,7 @@ header {
   bottom: 70vh;
   width:500px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   left: calc(-1 * 200px);
   animation: bluepink3 15s linear infinite;
   cursor: pointer;
@@ -497,7 +540,7 @@ header {
   bottom: 72vh;
   width: 250px;
   max-width: 28vw;
-  z-index: 2;
+  z-index: 4;
   right: calc(-1 * 200px);
   animation: orangefish3 10s linear infinite;
   cursor: pointer;
@@ -513,6 +556,27 @@ header {
   }
 }
 
+#seahorse3 {
+  position: absolute;
+  bottom: 10vh;
+  width: 70px;
+  max-width: 28vw;
+  z-index: 4;
+  left: calc(-1 * 200px);
+  animation: seahorse3 7s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes seahorse3 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(140vw + 200px));
+  }
+}
+
 #bgimage {
   position: absolute;
   z-index: 1;
@@ -521,4 +585,34 @@ header {
   height: 100%;
   background: url(../img/bg-done.png) no-repeat center;
   background-size: cover;
+}
+
+#seashell-closed {
+  position: absolute;
+  bottom: 5vh;
+  width: 150px;
+  left: 25px;
+  max-width: 28vw;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#treasure-chest {
+  position: absolute;
+  bottom: 18vh;
+  width: 180px;
+  right: 150px;
+  max-width: 28vw;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#seaweed {
+  position: absolute;
+  bottom: 10vh;
+  width: 600px;
+  right: -60px;
+  max-width: 50vw;
+  z-index: 3;
+  cursor: pointer;
 }
