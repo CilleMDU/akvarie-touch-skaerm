@@ -127,19 +127,19 @@
 
 #bpfish2 {
   position: absolute;
-  bottom: 5vh;
+  bottom: 40vh;
   width: 300px;
   max-width: 28vw;
   z-index: 2;
-  left: calc(-1 * 200px);
-  animation: bluepink2 12s linear infinite;
+  right: calc(-1 * 200px);
+  animation: bluepink2 14s linear infinite;
   cursor: pointer
 }
 
 @keyframes bluepink2 {
-   0% {transform: translateX(0);}
+   0% {transform: translateX(0) rotateY(180deg);}
    90%,
-   100% { transform: translateX(calc(100vw + 200px));
+   100% { transform: translateX(calc(-140vw - 200px))rotateY(180deg);
    }
 }
 
@@ -157,7 +157,7 @@
 @keyframes orangefish2 {
    0% {transform: translateX(0) rotateY(180deg);}
    90%,
-   100% { transform: translateX(calc(100vw + 200px)) ;
+   100% { transform: translateX(calc(100vw + 200px)) rotateY(180deg);
    }
 }
 
@@ -233,3 +233,4 @@
    100% { transform: translateX(calc(-140vw + 200px));
    }
 }
+
