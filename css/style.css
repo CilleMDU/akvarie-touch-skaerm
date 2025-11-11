@@ -4,3 +4,43 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#puffish {
+  position: absolute;
+  bottom: 2.8vh;
+  width: var(200px);
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * var(200px));
+  cursor: pointer;
+}
+
+#tuxfish {
+  position: absolute;
+  bottom: 2.8vh;
+  width: var(200px);
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * var(200px));
+  cursor: pointer;
+}
+
+#bpfish {
+  position: absolute;
+  bottom: 2.8vh;
+  width: var(200px);
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * var(200px));
+  cursor: pointer;
+}
+
+#ogfish {
+    position: absolute;
+  bottom: 2.8vh;
+  width: var(200px);
+  max-width: 28vw;
+  z-index: 2;
+  left: calc(-1 * var(200px));
+  cursor: pointer;
+}
