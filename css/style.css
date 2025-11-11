@@ -9,7 +9,7 @@
 #puffish {
   position: absolute;
   bottom: 20vh;
-  width: 100px;
+  width: 150px;
   max-width: 28vw;
   z-index: 2;
   right: calc(-1 * 200px);
@@ -27,7 +27,7 @@
 #tuxfish {
   position: absolute;
   bottom: 15vh;
-  width: 180px;
+  width: 300px;
   max-width: 28vw;
   z-index: 2;
   left: calc(-1 * 200px);
@@ -45,7 +45,7 @@
 #bpfish {
   position: absolute;
   bottom: 5vh;
-  width: 200px;
+  width: 250px;
   max-width: 28vw;
   z-index: 2;
   left: calc(-1 * 200px);
@@ -92,11 +92,11 @@
 #puffish2 {
   position: absolute;
   bottom: 60vh;
-  width: 100px;
+  width: 180px;
   max-width: 28vw;
   z-index: 2;
   left: calc(-1 * 200px);
-  animation: puffer2 7s linear infinite;
+  animation: puffer2 10s linear infinite;
   cursor: pointer
 }
 
@@ -109,26 +109,26 @@
 
 #tuxfish2 {
   position: absolute;
-  bottom: 15vh;
-  width: 180px;
+  bottom: 55vh;
+  width: 250px;
   max-width: 28vw;
   z-index: 2;
-  left: calc(-1 * 200px);
-  animation: tuxedo2 10s linear infinite;
+  right: calc(-1 * 200px);
+  animation: tuxedo2 13s linear infinite;
   cursor: pointer
 }
 
 @keyframes tuxedo2 {
-   0% {transform: translateX(0);}
+   0% {transform: translateX(0) rotateY(180deg);}
    90%,
-   100% { transform: translateX(calc(100vw + 200px));
+   100% { transform: translateX(calc(-140vw - 200px)) rotateY(180deg);
    }
 }
 
 #bpfish2 {
   position: absolute;
   bottom: 5vh;
-  width: 200px;
+  width: 300px;
   max-width: 28vw;
   z-index: 2;
   left: calc(-1 * 200px);
@@ -146,18 +146,18 @@
 #ogfish2 {
   position: absolute;
   bottom: 30vh;
-  width: 200px;
+  width: 275px;
   max-width: 28vw;
   z-index: 2;
-  right: calc(-1 * 200px);
+  left: calc(-1 * 200px);
   animation: orangefish2 8s linear infinite;
   cursor: pointer
 }
 
 @keyframes orangefish2 {
-   0% {transform: translateX(0);}
+   0% {transform: translateX(0) rotateY(180deg);}
    90%,
-   100% { transform: translateX(calc(-140vw + 200px));
+   100% { transform: translateX(calc(100vw + 200px)) rotateY(180deg);
    }
 }
 
