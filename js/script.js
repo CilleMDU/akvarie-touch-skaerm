@@ -1,213 +1,29 @@
 "use strict";
 
-const dodger = document.getElementById("dodger");
-const coin = document.getElementById("coin");
-const scoreElement = document.getElementById("points");
-const gameoverSound = document.getElementById("gameover");
-let score = 0;
-const startScreen = document.getElementById("startScreen");
-const startButton = document.getElementById("startknap");
-const backgroundMusic = document.getElementById("backgroundMusic");
+// Menu functionality
+const spilMenuBtn = document.getElementById("spilMenuBtn");
+const gameMenu = document.getElementById("gameMenu");
+const closeMenuBtn = document.getElementById("closeMenu");
 
-// Funktion til at starte baggrundsmusik
-function playBackgroundMusic() {
-  backgroundMusic.volume = 0.4;
-  backgroundMusic.play();
+// Open menu
+if (spilMenuBtn && gameMenu) {
+  spilMenuBtn.addEventListener("click", function () {
+    gameMenu.classList.add("active");
+  });
 }
 
-// Funktion til at stoppe baggrundsmusik
-function stopBackgroundMusic() {
-  backgroundMusic.pause();
-  backgroundMusic.currentTime = 0;
+// Close menu with X button
+if (closeMenuBtn && gameMenu) {
+  closeMenuBtn.addEventListener("click", function () {
+    gameMenu.classList.remove("active");
+  });
 }
 
-// Start spillet når knappen klikkes
-startButton.addEventListener("click", function () {
-  startScreen.style.display = "none";
-  playBackgroundMusic();
-});
-
-// Sæt fisken som baggrundsbillede
-dodger.style.backgroundImage = "url('img/BluefishDONE.gif')";
-
-// Funktion til at tjekke kollision med forhindringer (koraller)
-function checkStructureCollision() {
-  const dodgerRect = dodger.getBoundingClientRect();
-  const structures = document.getElementsByClassName("structure");
-
-  for (let structure of structures) {
-    const structureRect = structure.getBoundingClientRect();
-    if (
-      dodgerRect.left < structureRect.right &&
-      dodgerRect.right > structureRect.left &&
-      dodgerRect.top < structureRect.bottom &&
-      dodgerRect.bottom > structureRect.top
-    ) {
-      return true; // Kollision med koral
+// Close menu when clicking outside
+if (gameMenu) {
+  gameMenu.addEventListener("click", function (e) {
+    if (e.target === gameMenu) {
+      gameMenu.classList.remove("active");
     }
-  }
-  return false;
+  });
 }
-
-// Funktion til at tjekke om fisken har fanget maden
-function checkCollision() {
-  const dodgerRect = dodger.getBoundingClientRect();
-  const coinRect = coin.getBoundingClientRect();
-
-  // Tjek først for kollision med koraller
-  if (checkStructureCollision()) {
-    showGameOver();
-    return;
-  }
-
-  // Tjek kollision med normal mad
-  if (
-    dodgerRect.left < coinRect.right &&
-    dodgerRect.right > coinRect.left &&
-    dodgerRect.top < coinRect.bottom &&
-    dodgerRect.bottom > coinRect.top
-  ) {
-    // Collision detected!
-    score += 10;
-    scoreElement.textContent = score;
-    playCoinSound();
-
-    // Vis +10 notifikation
-    try {
-      const gameEl = document.getElementById("game");
-      const notif = document.createElement("span");
-      notif.className = "pickup-notif small";
-      notif.textContent = "+10";
-      const gameRect = gameEl.getBoundingClientRect();
-      const left = coinRect.left - gameRect.left;
-      const bottom = gameRect.bottom - coinRect.bottom;
-      notif.style.left = `${left}px`;
-      notif.style.bottom = `${bottom}px`;
-      gameEl.appendChild(notif);
-      setTimeout(() => {
-        notif.classList.add("fade-out");
-        setTimeout(() => notif.remove(), 600);
-      }, 400);
-    } catch (e) {
-      // ignore positioning errors
-    }
-    moveCoinToNewPosition();
-  }
-}
-
-// Flyt mad til ny tilfældig position
-function moveCoinToNewPosition() {
-  const gameWidth = 360;
-  const gameHeight = 360;
-  const randomX = Math.floor(Math.random() * gameWidth);
-  const randomY = Math.floor(Math.random() * gameHeight);
-
-  coin.style.left = `${randomX}px`;
-  coin.style.bottom = `${randomY}px`;
-}
-
-// Lyd funktioner
-function playMovement() {
-  const movement = document.getElementById("movement");
-  if (movement) {
-    movement.currentTime = 0;
-    movement.play().catch((err) => {});
-  }
-}
-
-function playGameOverSound() {
-  if (gameoverSound) {
-    gameoverSound.currentTime = 0;
-    gameoverSound.play().catch((err) => {});
-  }
-}
-
-function playCoinSound() {
-  const coinSound = document.getElementById("coinSound");
-  if (coinSound) {
-    coinSound.currentTime = 0;
-    coinSound.play().catch((err) => {});
-  }
-}
-
-// Game Over skærm
-function showGameOver() {
-  const gameOverScreen = document.getElementById("gameOverScreen");
-  const finalScoreElement = document.getElementById("finalScore");
-  finalScoreElement.textContent = score;
-  gameOverScreen.style.display = "flex";
-  playGameOverSound();
-  stopBackgroundMusic();
-}
-
-// Genstart spillet
-function resetGame() {
-  score = 0;
-  scoreElement.textContent = "0";
-  dodger.style.bottom = "180px";
-  dodger.style.left = "180px";
-  moveCoinToNewPosition();
-  document.getElementById("gameOverScreen").style.display = "none";
-  playBackgroundMusic();
-}
-
-// Event listeners
-document.getElementById("restartButton").addEventListener("click", resetGame);
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "ArrowLeft") moveDodgerLeft();
-  if (event.key === "ArrowRight") moveDodgerRight();
-  if (event.key === "ArrowUp") moveDodgerUp();
-  if (event.key === "ArrowDown") moveDodgerDown();
-});
-
-// Bevægelse funktioner
-function moveDodgerLeft() {
-  const left = parseInt(dodger.style.left.replace("px", ""), 10);
-  if (left > 0) {
-    dodger.style.left = `${left - 5}px`;
-    dodger.style.transform = "scaleX(-1)";
-    playMovement();
-    checkCollision();
-  } else {
-    showGameOver();
-  }
-}
-
-function moveDodgerRight() {
-  const left = parseInt(dodger.style.left.replace("px", ""), 10);
-  if (left < 360) {
-    dodger.style.left = `${left + 5}px`;
-    dodger.style.transform = "scaleX(1)";
-    playMovement();
-    checkCollision();
-  } else {
-    showGameOver();
-  }
-}
-
-function moveDodgerUp() {
-  const bottom = parseInt(dodger.style.bottom.replace("px", ""), 10);
-  if (bottom < 360) {
-    dodger.style.bottom = `${bottom + 5}px`;
-    dodger.style.transform = "rotate(-90deg)";
-    playMovement();
-    checkCollision();
-  } else {
-    showGameOver();
-  }
-}
-
-function moveDodgerDown() {
-  const bottom = parseInt(dodger.style.bottom.replace("px", ""), 10);
-  if (bottom > 0) {
-    dodger.style.bottom = `${bottom - 5}px`;
-    dodger.style.transform = "rotate(90deg)";
-    playMovement();
-    checkCollision();
-  } else {
-    showGameOver();
-  }
-}
-
-resetGame();

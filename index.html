@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akvarie</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <button id="spilMenuBtn">Spil</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akvarie</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="spilMenuBtn">Spil</button>
+    </header>
 
-  </header>
-<a href="game/game.html">Spil</a>
+    <!-- Spil Menu Overlay -->
+    <div id="gameMenu" class="game-menu">
+      <div class="menu-content">
+        <button id="closeMenu" class="close-btn">✕</button>
+        <h1>Vælg et spil</h1>
 
-<section id="fish">
-  <div id="pufferfish">
-    <img src="img/flat-pufferfish-swim.gif" alt="pufferfish" id="puffish">
-  </div>
+        <div class="game-cards">
+          <a href="game/game.html" class="game-card">
+            <div class="card-image">
+              <img src="img/game-preview-1.jpg" alt="Spil 1" />
+            </div>
+            <h2>Akvarie Eventyr</h2>
+          </a>
 
-  <div id="tuxedo">
-    <img src="img/tuxedo-fish.gif" alt="tuxedo damsel fish" id="tuxfish">
-  </div>
+          <a href="game-2/game-2.html" class="game-card">
+            <div class="card-image">
+              <img src="img/game-preview-2.jpg" alt="Spil 2" />
+            </div>
+            <h2>Fisk Leg</h2>
+          </a>
 
-  <div id="blue-pink">
-    <img src="img/BluefishDONE.gif" alt="blue and pink fish" id="bpfish">
-  </div>
+          <a href="fiske-spil.html" class="game-card">
+            <div class="card-image">
+              <img src="img/game-preview-3.jpg" alt="Spil 3" />
+            </div>
+            <h2>Tryk på Fiskene</h2>
+          </a>
+        </div>
+      </div>
+    </div>
 
-  <div id="orange-fish">
-    <img src="img/OrangefishDONE.gif" alt="orange fish" id="ogfish">
-  </div>
+    <section id="fish">
+      <div id="pufferfish">
+        <img src="img/flat-pufferfish-swim.gif" alt="pufferfish" id="puffish" />
+      </div>
 
-</section>
+      <div id="tuxedo">
+        <img src="img/tuxedo-fish.gif" alt="tuxedo damsel fish" id="tuxfish" />
+      </div>
 
+      <div id="blue-pink">
+        <img src="img/BluefishDONE.gif" alt="blue and pink fish" id="bpfish" />
+      </div>
 
-  <script src="js/script.js"></script>
-</body>
+      <div id="orange-fish">
+        <img src="img/OrangefishDONE.gif" alt="orange fish" id="ogfish" />
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
