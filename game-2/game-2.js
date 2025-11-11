@@ -209,3 +209,5 @@ function moveDodgerDown() {
     showGameOver();
   }
 }
+
+resetGame();
