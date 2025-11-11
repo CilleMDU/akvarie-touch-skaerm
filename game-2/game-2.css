@@ -365,12 +365,80 @@ body::before {
 
 #startScreen h1 {
   font-size: 3.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #ffeb3b;
   text-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
   animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Mascot intro section */
+.mascot-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.intro-mascot {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.4));
+  animation: fishBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes fishBounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+.intro-bubble {
+  position: relative;
+  background: white;
+  padding: 25px 40px;
+  border-radius: 30px;
+  max-width: 450px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.intro-bubble p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #003d7a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.intro-bubble::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-right: 25px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
 }
 
 .subtitle {
