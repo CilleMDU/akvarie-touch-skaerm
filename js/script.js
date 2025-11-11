@@ -12,8 +12,7 @@ const backgroundMusic = document.getElementById("backgroundMusic");
 // Funktion til at starte baggrundsmusik
 function playBackgroundMusic() {
   backgroundMusic.volume = 0.4;
-  backgroundMusic
-    .play()
+  backgroundMusic.play();
 }
 
 // Funktion til at stoppe baggrundsmusik
@@ -210,3 +209,5 @@ function moveDodgerDown() {
     showGameOver();
   }
 }
+
+resetGame();

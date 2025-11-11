@@ -15,12 +15,12 @@ let fishInterval;
 
 // Fiske billeder
 const fishImages = [
-  "img/BluefishDONE.gif",
-  "img/OrangefishDONE.gif",
-  "img/big-pufferfish-swim.gif",
-  "img/damsel-fish-swim.gif",
-  "img/flat-pufferfish-swim.gif",
-  "img/tuxedo-fish.gif",
+  "../img/BluefishDONE.gif",
+  "../img/OrangefishDONE.gif",
+  "../img/big-pufferfish-swim.gif",
+  "../img/damsel-fish-swim.gif",
+  "../img/flat-pufferfish-swim.gif",
+  "../img/tuxedo-fish.gif",
 ];
 
 // Start spillet
