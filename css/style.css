@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 header {
   position: fixed;
   top: 20px;
@@ -66,12 +65,13 @@ header {
 
 .menu-content {
   background: linear-gradient(180deg, #00a8cc, #0077b6);
-  padding: 60px 40px;
+  padding: 60px 60px;
   border-radius: 40px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   text-align: center;
   position: relative;
-  max-width: 95%;
+  max-width: 1400px;
+  width: 90%;
   max-height: 95%;
   overflow-y: auto;
   border: 8px solid white;
@@ -111,7 +111,7 @@ header {
 /* Game Cards Container */
 .game-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-top: 30px;
 }
@@ -201,10 +201,8 @@ header {
     width: 50px;
     height: 50px;
     font-size: 28px;
-  }}
-
-
-
+  }
+}
 
 #puffish {
   position: absolute;
@@ -214,14 +212,17 @@ header {
   z-index: 2;
   right: calc(-1 * 200px);
   animation: puffer 7s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes puffer {
-   0% {transform: translateX(0) ;}
-   90%,
-   100% { transform: translateX(calc(-140vw - 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-140vw - 200px));
+  }
 }
 
 #tuxfish {
@@ -232,14 +233,17 @@ header {
   z-index: 2;
   left: calc(-1 * 200px);
   animation: tuxedo 10s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes tuxedo {
-   0% {transform: translateX(0);}
-   90%,
-   100% { transform: translateX(calc(100vw + 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + 200px));
+  }
 }
 
 #bpfish {
@@ -250,14 +254,17 @@ header {
   z-index: 2;
   left: calc(-1 * 200px);
   animation: bluepink 12s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes bluepink {
-   0% {transform: translateX(0);}
-   90%,
-   100% { transform: translateX(calc(100vw + 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + 200px));
+  }
 }
 
 #ogfish {
@@ -268,14 +275,17 @@ header {
   z-index: 2;
   right: calc(-1 * 200px);
   animation: orangefish 8s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes orangefish {
-   0% {transform: translateX(0);}
-   90%,
-   100% { transform: translateX(calc(-140vw + 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-140vw + 200px));
+  }
 }
 
 #puffish2 {
@@ -286,14 +296,17 @@ header {
   z-index: 2;
   left: calc(-1 * 200px);
   animation: puffer2 10s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes puffer2 {
-   0% {transform: translateX(0) rotateY(180deg);}
-   90%,
-   100% { transform: translateX(calc(140vw + 200px)) rotateY(180deg);
-   }
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(140vw + 200px)) rotateY(180deg);
+  }
 }
 
 #tuxfish2 {
@@ -304,14 +317,17 @@ header {
   z-index: 2;
   right: calc(-1 * 200px);
   animation: tuxedo2 13s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes tuxedo2 {
-   0% {transform: translateX(0) rotateY(180deg);}
-   90%,
-   100% { transform: translateX(calc(-140vw - 200px)) rotateY(180deg);
-   }
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-140vw - 200px)) rotateY(180deg);
+  }
 }
 
 #bpfish2 {
@@ -322,14 +338,17 @@ header {
   z-index: 2;
   right: calc(-1 * 200px);
   animation: bluepink2 14s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes bluepink2 {
-   0% {transform: translateX(0) rotateY(180deg);}
-   90%,
-   100% { transform: translateX(calc(-140vw - 200px))rotateY(180deg);
-   }
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-140vw - 200px)) rotateY(180deg);
+  }
 }
 
 #ogfish2 {
@@ -340,16 +359,18 @@ header {
   z-index: 2;
   left: calc(-1 * 200px);
   animation: orangefish2 8s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes orangefish2 {
-   0% {transform: translateX(0) rotateY(180deg);}
-   90%,
-   100% { transform: translateX(calc(100vw + 200px)) rotateY(180deg);
-   }
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + 200px)) rotateY(180deg);
+  }
 }
-
 
 #puffish3 {
   position: absolute;
@@ -359,14 +380,17 @@ header {
   z-index: 2;
   right: calc(-1 * 200px);
   animation: puffer3 7s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes puffer3 {
-   0% {transform: translateX(0) ;}
-   90%,
-   100% { transform: translateX(calc(-140vw - 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-140vw - 200px));
+  }
 }
 
 #tuxfish3 {
@@ -377,14 +401,17 @@ header {
   z-index: 2;
   left: calc(-1 * 200px);
   animation: tuxedo3 10s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes tuxedo3 {
-   0% {transform: translateX(0);}
-   90%,
-   100% { transform: translateX(calc(100vw + 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + 200px));
+  }
 }
 
 #bpfish3 {
@@ -395,14 +422,17 @@ header {
   z-index: 2;
   left: calc(-1 * 200px);
   animation: bluepink3 12s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes bluepink3 {
-   0% {transform: translateX(0);}
-   90%,
-   100% { transform: translateX(calc(100vw + 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + 200px));
+  }
 }
 
 #ogfish3 {
@@ -413,14 +443,17 @@ header {
   z-index: 2;
   right: calc(-1 * 200px);
   animation: orangefish3 8s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
 
 @keyframes orangefish3 {
-   0% {transform: translateX(0);}
-   90%,
-   100% { transform: translateX(calc(-140vw + 200px));
-   }
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-140vw + 200px));
+  }
 }
 
 #bgimage {
@@ -433,4 +466,4 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-};
+}
