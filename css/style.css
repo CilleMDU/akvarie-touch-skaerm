@@ -194,6 +194,13 @@ body::before {
   filter: brightness(1.3) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
+#coin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 @keyframes floating {
   0% {
     transform: translateY(0px) rotate(0deg);
@@ -381,7 +388,7 @@ body::before {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, #1a0033 0%, #2d004d 100%);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
