@@ -26,7 +26,7 @@ if (startMascot) {
 }
 
 // lyd til når man dropper fisk
-const coinSound = new Audio("../audio/coinsound.mp3");
+const coinSound = new Audio("../audio/bobler2.mp3");
 
 // variabler til spillet
 let score = 0;
@@ -141,10 +141,19 @@ orangeBucket.addEventListener("drop", function (event) {
   }
 });
 
+const winMusic = new Audio();
+winMusic.src = "../audio/victory.wav";
+
+function playWinMusic() {
+  winMusic.volume = 0.1;
+  winMusic.play().catch((err) => console.log("Musik fejl:", err));
+}
+
 // vis sejrs-skærm
 function showWinScreen() {
   finalScoreElement.textContent = score;
   winScreen.classList.add("show");
+  winMusic.play();
 }
 
 // nulstil spillet
@@ -156,10 +165,19 @@ function resetGame() {
   createFish();
 }
 
+const backgroundMusic = new Audio();
+backgroundMusic.src = "../audio/meditation.mp3";
+
+function playBackgroundMusic() {
+  backgroundMusic.volume = 0.1;
+  backgroundMusic.play().catch((err) => console.log("Musik fejl:", err));
+}
+
 // start spillet
 function startGame() {
   startScreen.style.display = "none";
   gameContainer.style.display = "flex";
+  playBackgroundMusic();
   createFish();
 }
 

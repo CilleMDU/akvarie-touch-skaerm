@@ -26,7 +26,7 @@ if (startMascot) {
 
 // Funktion til at starte baggrundsmusik
 function playBackgroundMusic() {
-  backgroundMusic.volume = 0.4;
+  backgroundMusic.volume = 0.1;
   backgroundMusic.play();
 }
 
