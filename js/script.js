@@ -209,6 +209,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const bigPufferImage = new Image();
   bigPufferImage.src = "img/big-pufferfish-swim.gif";
 
+  //oppustnings lyd
+  const poofSound = new Audio();
+  poofSound.src = "audio/poof.wav"
+
   // Prut til purt fisk når den bliver lille
   const puffSound = new Audio();
   puffSound.src = "audio/prut.mp3";
@@ -218,6 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // skift mellem flat og big pufferfish
       if (puffish.src.includes("flat-pufferfish-swim.gif")) {
         puffish.src = "img/big-pufferfish-swim.gif";
+        poofSound.play();
       } else {
         puffish.src = "img/flat-pufferfish-swim.gif";
         puffSound.play();
@@ -230,6 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // skift mellem flat og big pufferfish
       if (puffish2.src.includes("flat-pufferfish-swim.gif")) {
         puffish2.src = "img/big-pufferfish-swim.gif";
+        poofSound.play();
       } else {
         puffish2.src = "img/flat-pufferfish-swim.gif";
         puffSound.play();
@@ -242,6 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // skift mellem flat og big pufferfish
       if (puffish3.src.includes("flat-pufferfish-swim.gif")) {
         puffish3.src = "img/big-pufferfish-swim.gif";
+        poofSound();
       } else {
         puffish3.src = "img/flat-pufferfish-swim.gif";
         puffSound.play();

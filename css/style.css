@@ -335,6 +335,9 @@ header {
   }
 }
 
+
+/* Cilles CSS start */
+
 #puffish {
   position: absolute;
   bottom: 35vh;
@@ -758,3 +761,5 @@ header {
    opacity: 1;
    transform: translateY(0);
 }
+
+/* Cilles CSS slut */
