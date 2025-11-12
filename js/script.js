@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Tuxedo og damsel fish skift - Cille
+  // Diverse animationer - Cille
 
   const magicSound = new Audio();
   magicSound.src = "audio/Transformation.wav";
@@ -295,8 +295,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".tuxie").forEach((tuxieDiv) => {
     tuxieDiv.addEventListener("click", toggleTux);
   });
-
-  //søheste animation - Cille
 
   const seahorses = document.querySelectorAll(".thereHorse");
   const neigh = new Audio();
