@@ -289,3 +289,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+const orangies = document.querySelectorAll(".orangy");
+const bobbles = new Audio("../audio/bobler1.mp3");
+
+
+orangies.forEach((orangy) => {
+  orangy.addEventListener("click", () => {
+
+    orangy.style.animationDuration = "1s";
+    bobbles.play();
+
+    setTimeout(() => {
+      orangy.style.animationDuration = "";
+    }, 7000);
+  });
+});
