@@ -635,6 +635,19 @@ header {
   max-width: 28vw;
   z-index: 2;
   cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 15px rgba(255, 235, 59, 0.6));
+  animation: treasureGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes treasureGlow {
+  from {
+    filter: drop-shadow(0 0 15px rgba(255, 235, 59, 0.6));
+  }
+  to {
+    filter: drop-shadow(0 0 30px rgba(255, 235, 59, 1))
+      drop-shadow(0 0 40px rgba(255, 235, 59, 0.8));
+  }
 }
 
 #seaweed {
