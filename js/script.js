@@ -56,6 +56,9 @@ const mus = document.getElementById("seashell-closed");
 const musOpen = new Image();
 musOpen.src = "img/musOpen.png";
 
+const musSound = new Audio();
+musSound.src = "audio/burp.mp3";
+
 if (mus) {
   mus.addEventListener("click", function () {
     // skift mellem musLuk.png og musOpen.png
@@ -74,6 +77,10 @@ const puffish3 = document.getElementById("puffish3");
 
 const bigPufferImage = new Image();
 bigPufferImage.src = "img/big-pufferfish-swim.gif";
+
+// Prut til purt fisk når den bliver lille
+const puffSound = new Audio();
+puffSound.src = "audio/prut.mp3";
 
 if (puffish) {
   puffish.addEventListener("click", function () {
@@ -111,7 +118,6 @@ if (puffish3) {
   });
 }
 
-const puffSound = new Audio ();
-puffSound.src = "audio/prut.mp3"
+
 
 
