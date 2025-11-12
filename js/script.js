@@ -1,6 +1,5 @@
 "use strict";
 
-
 document.addEventListener("DOMContentLoaded", () => {
   // informations overlay
 
@@ -10,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       className: "pufpuf",
       navn: "Kuglefisk",
       leveTid: "5-10 år",
-      funFact: "Pikkede kuglefisk kaldes for pindsvinefisk"
+      funFact: "Pikkede kuglefisk kaldes for pindsvinefisk",
     },
 
     {
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Damselfish",
       leveTid: "5-7 år",
       funFact:
-        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish"
+        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
     },
 
     {
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Diskusfisk",
       leveTid: "8-12 år",
       funFact:
-        "Diskus fisken kaldes for Kongen af Akvariet på grund af dens strålende farver"
+        "Diskus fisken kaldes for Kongen af Akvariet på grund af dens strålende farver",
     },
 
     {
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Afrikanske Juvel Cichlide",
       leveTid: "7-15 år",
       funFact:
-        "Uden for yngle sæson er disse fisk ikke farverige, men i stedet er de olivengrønne"
+        "Uden for yngle sæson er disse fisk ikke farverige, men i stedet er de olivengrønne",
     },
 
     {
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Søheste",
       leveTid: "4 år",
       funFact:
-        "Søheste findes i over 11 farvre alt efter området de lever i, deres humør og deres race"
+        "Søheste findes i over 11 farvre alt efter området de lever i, deres humør og deres race",
     },
   ];
 
@@ -230,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //oppustnings lyd
   const poofSound = new Audio();
-  poofSound.src = "audio/poof.wav"
+  poofSound.src = "audio/poof.wav";
 
   // Prut til purt fisk når den bliver lille
   const puffSound = new Audio();
@@ -301,20 +300,22 @@ document.addEventListener("DOMContentLoaded", () => {
   neigh.src = "audio/horsea.wav";
 
   seahorses.forEach((horse) => {
-    horse.addEventListener("click", function () {
+    horse.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      horse.classList.add("seahorse-bounce");
+      setTimeout(() => horse.classList.remove("seahorse-bounce"), 600);
+
       neigh.play();
     });
   });
 });
 
-
 const orangies = document.querySelectorAll(".orangy");
 const bobbles = new Audio("../audio/bobler1.mp3");
 
-
 orangies.forEach((orangy) => {
   orangy.addEventListener("click", () => {
-
     orangy.style.animationDuration = "1s";
     bobbles.play();
 
@@ -323,7 +324,6 @@ orangies.forEach((orangy) => {
     }, 7000);
   });
 });
-
 
 const discusFish = document.querySelectorAll(".diskus");
 const spinSound = new Audio("../audio/spinny.wav");
