@@ -57,7 +57,7 @@ const musOpen = new Image();
 musOpen.src = "img/musOpen.png";
 
 const musSound = new Audio();
-musSound.src = "audio/burp.mp3";
+musSound.src = "audio/burp-kort.mp3";
 
 if (mus) {
   mus.addEventListener("click", function () {
