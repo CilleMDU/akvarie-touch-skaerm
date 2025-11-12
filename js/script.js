@@ -19,7 +19,7 @@ if (closeMenuBtn && gameMenu) {
   });
 }
 
-//lukker menuen når man klikker udenfor menu conntet 
+//lukker menuen når man klikker udenfor menu conntet
 if (gameMenu) {
   gameMenu.addEventListener("click", function (e) {
     if (e.target === gameMenu) {
@@ -29,13 +29,19 @@ if (gameMenu) {
 }
 
 // Åbner for tanget, og viser kiste.
-
-
 const tang = document.getElementById("seaweed");
-new Image().src = "img/tang2.png";
+
+// preload tang2 billedet
+const tang2Image = new Image();
+tang2Image.src = "img/tang2.png";
 
 if (tang) {
-  tang.addEventListener("click", () => {
-    tang.classList.toggle("tang2");
+  tang.addEventListener("click", function () {
+    // skift mellem tang1.png og tang2.png
+    if (tang.src.includes("tang1.png")) {
+      tang.src = "img/tang2.png";
+    } else {
+      tang.src = "img/tang1.png";
+    }
   });
 }

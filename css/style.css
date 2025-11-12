@@ -259,8 +259,6 @@ header {
     height: 50px;
     font-size: 28px;
   }
-
-
 }
 
 #puffish {
@@ -518,7 +516,7 @@ header {
 #bpfish3 {
   position: absolute;
   bottom: 70vh;
-  width:500px;
+  width: 500px;
   max-width: 28vw;
   z-index: 4;
   left: calc(-1 * 200px);
@@ -616,14 +614,5 @@ header {
   max-width: 50vw;
   z-index: 3;
   cursor: pointer;
-  transition: opacity 0.25s ease;
-  cursor: pointer;
-}
-
-.hidden-for-swap {
-  opacity: 0;
-}
-
-#seaweed.tang2 {
-  content: url("img/tang2.png");
+  transition: all 0.3s ease;
 }
