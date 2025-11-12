@@ -594,6 +594,7 @@ header {
   max-width: 28vw;
   z-index: 1;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #treasure-chest {

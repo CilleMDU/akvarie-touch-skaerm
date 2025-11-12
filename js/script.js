@@ -27,12 +27,10 @@ if (gameMenu) {
     }
   });
 }
-
-// Åbner for tanget, og viser kiste.
 const tang = document.getElementById("seaweed");
 
-// preload tang2 billedet
 const tang2Image = new Image();
+// preload tang2 billedet
 tang2Image.src = "img/tang2.png";
 
 if (tang) {
@@ -42,6 +40,22 @@ if (tang) {
       tang.src = "img/tang2.png";
     } else {
       tang.src = "img/tang1.png";
+    }
+  });
+}
+
+const mus = document.getElementById("seashell-closed");
+
+const musOpen = new Image();
+musOpen.src = "img/musOpen.png";
+
+if (mus) {
+  mus.addEventListener("click", function () {
+    // skift mellem tang1.png og tang2.png
+    if (mus.src.includes("musLuk.png")) {
+      mus.src = "img/musOpen.png";
+    } else {
+      mus.src = "img/musLuk.png";
     }
   });
 }
