@@ -325,3 +325,18 @@ orangies.forEach((orangy) => {
     }, 7000);
   });
 });
+
+
+const discusFish = document.querySelectorAll(".diskus");
+
+discusFish.forEach((diskus) => {
+  diskus.addEventListener("click", function () {
+    if (diskus.classList.contains("lefty")) {
+      diskus.classList.add("spin-left");
+      setTimeout(() => diskus.classList.remove("spin-left"), 5000);
+    } else {
+      diskus.classList.add("spin-right");
+      setTimeout(() => diskus.classList.remove("spin-right"), 5000);
+    }
+  });
+});

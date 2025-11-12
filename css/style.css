@@ -792,4 +792,36 @@ header {
   background: #ff3838;
 }
 
+#bpfish.spin-right {
+  animation: bluepink 19s linear infinite, spin-right 3s linear infinite;
+}
+
+#bpfish2.spin-left {
+  animation: bluepink2 16s linear infinite, spin-left 3s linear infinite;
+}
+
+#bpfish3.spin-right {
+  animation: bluepink3 20s linear infinite, spin-right 3s linear infinite;
+}
+
+
+@keyframes spin-right {
+  0% {
+    transform: translateX(0) rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: translateX(calc(100vw + 200px)) rotateY(1800deg) rotateX(180deg);
+  }
+}
+
+@keyframes spin-left {
+  0% {
+    transform: translateX(0) rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 200px)) rotateY(1800deg) rotateX(180deg);
+  }
+}
+
+
 /* Cilles CSS slut */
