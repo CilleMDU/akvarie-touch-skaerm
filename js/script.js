@@ -107,3 +107,8 @@ if (puffish3) {
     }
   });
 }
+
+const puffSound = new Audio ();
+puffSound.src = "audio/prut.mp3"
+
+
