@@ -64,6 +64,7 @@ if (mus) {
     // skift mellem musLuk.png og musOpen.png
     if (mus.src.includes("musLuk.png")) {
       mus.src = "img/musOpen.png";
+      musSound.play();
     } else {
       mus.src = "img/musLuk.png";
     }
