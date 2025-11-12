@@ -8,6 +8,21 @@ const gameArea = document.getElementById("gameArea");
 const scoreElement = document.getElementById("points");
 const clickSound = document.getElementById("clickSound");
 const backgroundMusic = document.getElementById("backgroundMusic");
+const startMascot = document.getElementById("startMascot");
+
+// Maskot animation
+const mascotSound = new Audio("../audio/spil1Lyd.m4a");
+
+if (startMascot) {
+  // skift til gif når siden loader
+  startMascot.src = "../img/talknemofish.gif";
+  mascotSound.play();
+
+  // skift tilbage til png når lyden er færdig
+  mascotSound.addEventListener("ended", function () {
+    startMascot.src = "../img/Nemo-fish.png";
+  });
+}
 
 // Spil variabler
 let score = 0;

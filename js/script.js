@@ -24,11 +24,25 @@ const fishInfo = [];
 const spilMenuBtn = document.getElementById("spilMenuBtn");
 const gameMenu = document.getElementById("gameMenu");
 const closeMenuBtn = document.getElementById("closeMenu");
+  const menuMascot = document.getElementById("menuMascot");
+
+const menuSound = new Audio("audio/menuLyd.m4a");
 
 // åbner menu når man klikker på spil menu knappen:)
 if (spilMenuBtn && gameMenu) {
   spilMenuBtn.addEventListener("click", function () {
     gameMenu.classList.add("active");
+
+    // skift til gif og afspil lyd
+    if (menuMascot) {
+      menuMascot.src = "img/talknemofish.gif";
+      menuSound.play();
+
+      // skift tilbage til png når lyden er færdig
+      menuSound.addEventListener("ended", function () {
+        menuMascot.src = "img/Nemo-fish.png";
+      });
+    }
   });
 }
 
@@ -78,7 +92,7 @@ musSound.src = "audio/burp-kort.mp3";
 
 // funktion til at lave bobler fra muslingen
 function createShellBubbles() {
-  // Funktionen her laver mellem 0-8 bobler 
+  // Funktionen her laver mellem 0-8 bobler
   for (let i = 0; i < 8; i++) {
     setTimeout(function () {
       const bubble = document.createElement("div");

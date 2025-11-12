@@ -9,6 +9,21 @@ const finalScoreElement = document.getElementById("finalScore");
 const playAgainBtn = document.getElementById("playAgainBtn");
 const blueBucket = document.getElementById("blueBucket");
 const orangeBucket = document.getElementById("orangeBucket");
+const startMascot = document.getElementById("startMascot");
+
+// Maskot animation
+const mascotSound = new Audio("../audio/spil3Lyd.m4a");
+
+if (startMascot) {
+  // skift til gif når siden loader
+  startMascot.src = "../img/talknemofish.gif";
+  mascotSound.play();
+
+  // skift tilbage til png når lyden er færdig
+  mascotSound.addEventListener("ended", function () {
+    startMascot.src = "../img/Nemo-fish.png";
+  });
+}
 
 // lyd til når man dropper fisk
 const coinSound = new Audio("../audio/coinsound.mp3");
