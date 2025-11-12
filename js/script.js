@@ -1,5 +1,12 @@
 "use strict";
 
+// Skriv her Cille! :-) 
+const fishInfo = [
+
+
+
+]
+
 // Menu functionality
 const spilMenuBtn = document.getElementById("spilMenuBtn");
 const gameMenu = document.getElementById("gameMenu");
@@ -60,12 +67,11 @@ if (mus) {
   });
 }
 
-// pufferfish billede swap
+// De 3 const her, er fordi vi har 3 foreskellige puffer fish i vores HTML :`-) 
 const puffish = document.getElementById("puffish");
 const puffish2 = document.getElementById("puffish2");
 const puffish3 = document.getElementById("puffish3");
 
-// preload big-pufferfish billedet
 const bigPufferImage = new Image();
 bigPufferImage.src = "img/big-pufferfish-swim.gif";
 
