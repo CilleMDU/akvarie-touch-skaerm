@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       className: "pufpuf",
       navn: "Kuglefisk",
       leveTid: "5-10 år",
-      funFact: "Pikkede kuglefisk kaldes for pindsvinefisk",
+      funFact: "Pikkede kuglefisk kaldes for pindsvinefisk"
     },
 
     {
@@ -18,7 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Damselfish",
       leveTid: "5-7 år",
       funFact:
-        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
+        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish"
+    },
+
+    {
+      className: "diskus",
+      navn: "Diskusfisk",
+      leveTid: "8-12 år",
+      funFact:
+        "Diskus fisken kaldes for Kongen af Akvariet på grund af dens strålende farver"
+    },
+
+    {
+      className: "orangy",
+      navn: "Afrikanske Juvel Cichlide",
+      leveTid: "7-15 år",
+      funFact:
+        "Uden for yngle sæson er disse fisk ikke farverige, men i stedet er de olivengrønne"
     },
 
     {
@@ -26,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Søheste",
       leveTid: "4 år",
       funFact:
-        "Søheste findes i over 11 farvre alt efter området de lever i, deres humør og deres race",
+        "Søheste findes i over 11 farvre alt efter området de lever i, deres humør og deres race"
     },
   ];
 
@@ -259,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Tuxedo og damsel fish skift - Cille
+  // Diverse animationer - Cille
 
   const magicSound = new Audio();
   magicSound.src = "audio/Transformation.wav";
@@ -279,8 +295,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".tuxie").forEach((tuxieDiv) => {
     tuxieDiv.addEventListener("click", toggleTux);
   });
-
-  //søheste animation - Cille
 
   const seahorses = document.querySelectorAll(".thereHorse");
   const neigh = new Audio();
@@ -307,5 +321,23 @@ orangies.forEach((orangy) => {
     setTimeout(() => {
       orangy.style.animationDuration = "";
     }, 7000);
+  });
+});
+
+
+const discusFish = document.querySelectorAll(".diskus");
+const spinSound = new Audio("../audio/spinny.wav");
+
+discusFish.forEach((diskus) => {
+  diskus.addEventListener("click", function () {
+    if (diskus.classList.contains("lefty")) {
+      diskus.classList.add("spin-left");
+      setTimeout(() => diskus.classList.remove("spin-left"), 2100);
+    } else {
+      diskus.classList.add("spin-right");
+      setTimeout(() => diskus.classList.remove("spin-right"), 2100);
+    }
+
+    spinSound.play();
   });
 });
