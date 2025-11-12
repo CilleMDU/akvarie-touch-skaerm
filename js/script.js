@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const seahorses = document.querySelectorAll(".thereHorse");
   const neigh = new Audio();
-  neigh.src = "audio/horsea.wav";
+  neigh.src = "audio/seahorseLyd.mp3";
 
   seahorses.forEach((thereHorse) => {
     thereHorse.addEventListener("click", function () {
