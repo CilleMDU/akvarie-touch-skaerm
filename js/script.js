@@ -36,18 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (getFishfacts) {
       getFishfacts.innerHTML = html;
       getFishfacts.classList.add("is-visible");
-
-      setTimeout(function () {
-        getFishfacts.classList.remove("is-visible");
-      }, 8000);
     }
   }
 
   fishInfo.forEach((fish) => {
     document.querySelectorAll("." + fish.className).forEach((elem) => {
-      elem.addEventListener("mouseover", () => {
+      elem.addEventListener("click", () => {
         const fishDetails = `
 
+              <button id="closeMenu2" class="close-btn2">✕</button>
                <strong>${fish.navn}</strong><br>
                Levetid: ${fish.leveTid}<br>
                Fun fact: ${fish.funFact}
@@ -55,6 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
         showFishfacts(fishDetails);
       });
     });
+  });
+
+  getFishfacts.addEventListener("click", (e) => {
+    if (e.target.classList.contains("close-btn2")) {
+      getFishfacts.classList.remove("is-visible");
+    }
   });
 
   //Bagrundsmusik - Cille
