@@ -299,49 +299,51 @@ document.addEventListener("DOMContentLoaded", () => {
     tuxieDiv.addEventListener("click", toggleTux);
   });
 
+  const orangies = document.querySelectorAll(".orangy");
+  const bobbles = new Audio("../audio/bobler1.mp3");
+
+  orangies.forEach((orangy) => {
+    orangy.addEventListener("click", () => {
+      orangy.style.animationDuration = "1s";
+      bobbles.play();
+
+      setTimeout(() => {
+        orangy.style.animationDuration = "";
+      }, 7000);
+    });
+  });
+
+  const discusFish = document.querySelectorAll(".diskus");
+  const spinSound = new Audio("../audio/spinny.wav");
+
+  discusFish.forEach((diskus) => {
+    diskus.addEventListener("click", function () {
+      if (diskus.classList.contains("lefty")) {
+        diskus.classList.add("spin-left");
+        setTimeout(() => diskus.classList.remove("spin-left"), 2100);
+      } else {
+        diskus.classList.add("spin-right");
+        setTimeout(() => diskus.classList.remove("spin-right"), 2100);
+      }
+
+      spinSound.play();
+    });
+  });
+
   const seahorses = document.querySelectorAll(".thereHorse");
   const neigh = new Audio();
   neigh.src = "audio/horsea.wav";
 
-  seahorses.forEach((horse) => {
-    horse.addEventListener("click", function (e) {
-      e.stopPropagation();
-
-      horse.classList.add("seahorse-bounce");
-      setTimeout(() => horse.classList.remove("seahorse-bounce"), 600);
-
+  seahorses.forEach((thereHorse) => {
+    thereHorse.addEventListener("click", function () {
+      if (thereHorse.classList.contains("righty")) {
+        thereHorse.classList.add("seahorseHop2");
+        setTimeout(() => thereHorse.classList.remove("seahorseHop2"), 2100);
+      } else {
+        thereHorse.classList.add("seahorseHop");
+        setTimeout(() => thereHorse.classList.remove("seahorseHop"), 2100);
+      }
       neigh.play();
     });
-  });
-});
-
-const orangies = document.querySelectorAll(".orangy");
-const bobbles = new Audio("../audio/bobler1.mp3");
-
-orangies.forEach((orangy) => {
-  orangy.addEventListener("click", () => {
-    orangy.style.animationDuration = "1s";
-    bobbles.play();
-
-    setTimeout(() => {
-      orangy.style.animationDuration = "";
-    }, 7000);
-  });
-});
-
-const discusFish = document.querySelectorAll(".diskus");
-const spinSound = new Audio("../audio/spinny.wav");
-
-discusFish.forEach((diskus) => {
-  diskus.addEventListener("click", function () {
-    if (diskus.classList.contains("lefty")) {
-      diskus.classList.add("spin-left");
-      setTimeout(() => diskus.classList.remove("spin-left"), 2100);
-    } else {
-      diskus.classList.add("spin-right");
-      setTimeout(() => diskus.classList.remove("spin-right"), 2100);
-    }
-
-    spinSound.play();
   });
 });
