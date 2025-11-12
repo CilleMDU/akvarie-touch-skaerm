@@ -793,15 +793,15 @@ header {
 }
 
 #bpfish.spin-right {
-  animation: bluepink 19s linear infinite, spin-right 3s linear infinite;
+  animation: bluepink 19s linear infinite, spin-right 2s linear infinite;
 }
 
 #bpfish2.spin-left {
-  animation: bluepink2 16s linear infinite, spin-left 3s linear infinite;
+  animation: bluepink2 16s linear infinite, spin-left 2s linear infinite;
 }
 
 #bpfish3.spin-right {
-  animation: bluepink3 20s linear infinite, spin-right 3s linear infinite;
+  animation: bluepink3 20s linear infinite, spin-right 2s linear infinite;
 }
 
 

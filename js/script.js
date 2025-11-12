@@ -328,15 +328,18 @@ orangies.forEach((orangy) => {
 
 
 const discusFish = document.querySelectorAll(".diskus");
+const spinSound = new Audio("../audio/spinny.wav");
 
 discusFish.forEach((diskus) => {
   diskus.addEventListener("click", function () {
     if (diskus.classList.contains("lefty")) {
       diskus.classList.add("spin-left");
-      setTimeout(() => diskus.classList.remove("spin-left"), 5000);
+      setTimeout(() => diskus.classList.remove("spin-left"), 2100);
     } else {
       diskus.classList.add("spin-right");
-      setTimeout(() => diskus.classList.remove("spin-right"), 5000);
+      setTimeout(() => diskus.classList.remove("spin-right"), 2100);
     }
+
+    spinSound.play();
   });
 });
