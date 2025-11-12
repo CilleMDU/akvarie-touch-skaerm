@@ -57,7 +57,7 @@ musSound.src = "audio/burp-kort.mp3";
 
 // funktion til at lave bobler fra muslingen
 function createShellBubbles() {
-  // lav 8 bobler
+  // Funktionen her laver mellem 0-8 bobler 
   for (let i = 0; i < 8; i++) {
     setTimeout(function () {
       const bubble = document.createElement("div");
