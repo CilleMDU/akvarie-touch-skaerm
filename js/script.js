@@ -27,3 +27,15 @@ if (gameMenu) {
     }
   });
 }
+
+// Åbner for tanget, og viser kiste.
+
+
+const tang = document.getElementById("seaweed");
+new Image().src = "img/tang2.png";
+
+if (tang) {
+  tang.addEventListener("click", () => {
+    tang.classList.toggle("tang2");
+  });
+}
