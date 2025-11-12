@@ -51,11 +51,53 @@ musOpen.src = "img/musOpen.png";
 
 if (mus) {
   mus.addEventListener("click", function () {
-    // skift mellem tang1.png og tang2.png
+    // skift mellem musLuk.png og musOpen.png
     if (mus.src.includes("musLuk.png")) {
       mus.src = "img/musOpen.png";
     } else {
       mus.src = "img/musLuk.png";
+    }
+  });
+}
+
+// pufferfish billede swap
+const puffish = document.getElementById("puffish");
+const puffish2 = document.getElementById("puffish2");
+const puffish3 = document.getElementById("puffish3");
+
+// preload big-pufferfish billedet
+const bigPufferImage = new Image();
+bigPufferImage.src = "img/big-pufferfish-swim.gif";
+
+if (puffish) {
+  puffish.addEventListener("click", function () {
+    // skift mellem flat og big pufferfish
+    if (puffish.src.includes("flat-pufferfish-swim.gif")) {
+      puffish.src = "img/big-pufferfish-swim.gif";
+    } else {
+      puffish.src = "img/flat-pufferfish-swim.gif";
+    }
+  });
+}
+
+if (puffish2) {
+  puffish2.addEventListener("click", function () {
+    // skift mellem flat og big pufferfish
+    if (puffish2.src.includes("flat-pufferfish-swim.gif")) {
+      puffish2.src = "img/big-pufferfish-swim.gif";
+    } else {
+      puffish2.src = "img/flat-pufferfish-swim.gif";
+    }
+  });
+}
+
+if (puffish3) {
+  puffish3.addEventListener("click", function () {
+    // skift mellem flat og big pufferfish
+    if (puffish3.src.includes("flat-pufferfish-swim.gif")) {
+      puffish3.src = "img/big-pufferfish-swim.gif";
+    } else {
+      puffish3.src = "img/flat-pufferfish-swim.gif";
     }
   });
 }
