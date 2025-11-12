@@ -4,7 +4,7 @@
 const nemoIntro = document.getElementById("nemoIntro");
 const introSound = new Audio("audio/introLyd.m4a");
 
-// når man klikker på nemo afspilles lyden
+// når man klikker på nemo afspilles lyden (lavet som click da det ikke virkede med autoplay men optimalt havde vi brugt autoplay)
 nemoIntro.addEventListener("click", function () {
   introSound.play();
 
