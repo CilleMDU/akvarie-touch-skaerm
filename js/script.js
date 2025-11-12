@@ -82,6 +82,7 @@ if (puffish) {
       puffish.src = "img/big-pufferfish-swim.gif";
     } else {
       puffish.src = "img/flat-pufferfish-swim.gif";
+      puffSound.play();
     }
   });
 }
@@ -93,6 +94,7 @@ if (puffish2) {
       puffish2.src = "img/big-pufferfish-swim.gif";
     } else {
       puffish2.src = "img/flat-pufferfish-swim.gif";
+      puffSound.play();
     }
   });
 }
@@ -104,6 +106,7 @@ if (puffish3) {
       puffish3.src = "img/big-pufferfish-swim.gif";
     } else {
       puffish3.src = "img/flat-pufferfish-swim.gif";
+      puffSound.play();
     }
   });
 }
