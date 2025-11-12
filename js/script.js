@@ -1,5 +1,22 @@
 "use strict";
 
+// Nemo intro
+const nemoIntro = document.getElementById("nemoIntro");
+const introSound = new Audio("audio/introLyd.m4a");
+
+// når man klikker på nemo afspilles lyden
+nemoIntro.addEventListener("click", function () {
+  introSound.play();
+
+  // fade out og fjern intro efter 9 sekunder
+  setTimeout(function () {
+    nemoIntro.classList.add("fade-out");
+    setTimeout(function () {
+      nemoIntro.remove();
+    }, 1000); // vent 1 sekund på fade out animation
+  }, 9000);
+});
+
 // Skriv her Cille! :-)
 const fishInfo = [];
 
@@ -58,7 +75,6 @@ musOpen.src = "img/musOpen.png";
 
 const musSound = new Audio();
 musSound.src = "audio/burp-kort.mp3";
-
 
 // funktion til at lave bobler fra muslingen
 function createShellBubbles() {
