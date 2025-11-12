@@ -43,7 +43,7 @@ startButton.addEventListener("click", function () {
 });
 
 // Sæt fisken som baggrundsbillede
-dodger.style.backgroundImage = "url('../img/BluefishDONE.gif')";
+dodger.style.backgroundImage = "url('../img/scubamand.png')";
 
 // Funktion til at tjekke kollision med forhindringer (koraller)
 function checkStructureCollision() {

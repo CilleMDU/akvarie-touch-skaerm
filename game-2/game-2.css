@@ -189,7 +189,7 @@ body::before {
 
 /* Fisken (dodger) */
 #dodger {
-  background-image: url(../img/BluefishDONE.gif);
+  background-image: url(../img/scubamand.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -200,7 +200,9 @@ body::before {
   left: 180px;
   z-index: 3;
   filter: drop-shadow(0 0 5px rgba(100, 200, 255, 0.6));
-  background-color: tomato;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  /* background-color: tomato;  */
+  /* ovenstående indsættet for at se hitboks */
 }
 
 /* Score */

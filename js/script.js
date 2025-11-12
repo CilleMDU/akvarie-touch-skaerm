@@ -87,7 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.removeEventListener("click", playMediBackgroundMusic);
   }
 
+  // Prøv at afspille med det samme
   playMediBackgroundMusic();
+
+  // Hvis det ikke virker, afspil ved første klik
+  document.addEventListener("click", playMediBackgroundMusic, { once: true });
 
   // Nemo intro
   const nemoIntro = document.getElementById("nemoIntro");
