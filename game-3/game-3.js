@@ -26,7 +26,8 @@ if (startMascot) {
 }
 
 // lyd til når man dropper fisk
-const coinSound = new Audio("../audio/coinsound.mp3");
+const coinSound = new Audio("../audio/bobler2.mp3");
+const wrongSound = new Audio("../audio/wrong.wav");
 
 // variabler til spillet
 let score = 0;
@@ -104,19 +105,22 @@ blueBucket.addEventListener("drop", function (event) {
 
   const fishColor = draggedFish.dataset.color;
 
-  if (fishColor === "blue") {
-    // korrekt!
-    coinSound.play();
-    score = score + 1;
-    scoreElement.textContent = score;
-    draggedFish.remove();
-    fishSorted = fishSorted + 1;
+if (fishColor === "blue") {
+  // korrekt!
+  coinSound.play();
+  score = score + 1;
+  scoreElement.textContent = score;
+  draggedFish.remove();
+  fishSorted = fishSorted + 1;
+} else {
+  // forkert farve
+  wrongSound.play();
+}
 
-    // tjek om alle fisk er sorteret
-    if (fishSorted === totalFish) {
-      setTimeout(showWinScreen, 500);
-    }
-  }
+// tjek om alle fisk er sorteret
+if (fishSorted === totalFish) {
+  setTimeout(showWinScreen, 500);
+}
 });
 
 // når jeg slipper fisken i orange spand
@@ -126,25 +130,37 @@ orangeBucket.addEventListener("drop", function (event) {
 
   const fishColor = draggedFish.dataset.color;
 
-  if (fishColor === "orange") {
-    // korrekt!
-    coinSound.play();
-    score = score + 1;
-    scoreElement.textContent = score;
-    draggedFish.remove();
-    fishSorted = fishSorted + 1;
+if (fishColor === "orange") {
+  // korrekt!
+  coinSound.play();
+  score = score + 1;
+  scoreElement.textContent = score;
+  draggedFish.remove();
+  fishSorted = fishSorted + 1;
+} else {
+  // forkert farve
+  wrongSound.play();
+}
 
-    // tjek om alle fisk er sorteret
-    if (fishSorted === totalFish) {
-      setTimeout(showWinScreen, 500);
-    }
-  }
+// tjek om alle fisk er sorteret
+if (fishSorted === totalFish) {
+  setTimeout(showWinScreen, 500);
+}
 });
+
+const winMusic = new Audio();
+winMusic.src = "../audio/victory.wav";
+
+function playWinMusic() {
+  winMusic.volume = 0.1;
+  winMusic.play().catch((err) => console.log("Musik fejl:", err));
+}
 
 // vis sejrs-skærm
 function showWinScreen() {
   finalScoreElement.textContent = score;
   winScreen.classList.add("show");
+  winMusic.play();
 }
 
 // nulstil spillet
@@ -156,10 +172,19 @@ function resetGame() {
   createFish();
 }
 
+const backgroundMusic = new Audio();
+backgroundMusic.src = "../audio/meditation.mp3";
+
+function playBackgroundMusic() {
+  backgroundMusic.volume = 0.1;
+  backgroundMusic.play().catch((err) => console.log("Musik fejl:", err));
+}
+
 // start spillet
 function startGame() {
   startScreen.style.display = "none";
   gameContainer.style.display = "flex";
+  playBackgroundMusic();
   createFish();
 }
 

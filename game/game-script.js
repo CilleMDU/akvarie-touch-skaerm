@@ -48,7 +48,7 @@ startButton.addEventListener("click", function () {
 
 // Baggrundsmusik
 function playBackgroundMusic() {
-  backgroundMusic.volume = 0.3;
+  backgroundMusic.volume = 0.1;
   backgroundMusic.play().catch((err) => console.log("Musik fejl:", err));
 }
 
