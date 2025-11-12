@@ -1,11 +1,7 @@
 "use strict";
 
-// Skriv her Cille! :-) 
-const fishInfo = [
-
-
-
-]
+// Skriv her Cille! :-)
+const fishInfo = [];
 
 // Menu functionality
 const spilMenuBtn = document.getElementById("spilMenuBtn");
@@ -59,19 +55,50 @@ musOpen.src = "img/musOpen.png";
 const musSound = new Audio();
 musSound.src = "audio/burp-kort.mp3";
 
+// funktion til at lave bobler fra muslingen
+function createShellBubbles() {
+  // lav 8 bobler
+  for (let i = 0; i < 8; i++) {
+    setTimeout(function () {
+      const bubble = document.createElement("div");
+      bubble.className = "shell-bubble";
+
+      // lidt tilfældig position så de ikke alle kommer fra samme sted
+      const randomOffset = Math.random() * 40 - 20;
+      bubble.style.left = 80 + randomOffset + "px";
+
+      // lidt tilfældig størrelse
+      const randomSize = 10 + Math.random() * 15;
+      bubble.style.width = randomSize + "px";
+      bubble.style.height = randomSize + "px";
+
+      // lidt tilfældig delay i animation
+      bubble.style.animationDelay = Math.random() * 0.3 + "s";
+
+      document.body.appendChild(bubble);
+
+      // fjern boblen efter animation er færdig
+      setTimeout(function () {
+        bubble.remove();
+      }, 2500);
+    }, i * 100); // delay mellem hver boble
+  }
+}
+
 if (mus) {
   mus.addEventListener("click", function () {
     // skift mellem musLuk.png og musOpen.png
     if (mus.src.includes("musLuk.png")) {
       mus.src = "img/musOpen.png";
       musSound.play();
+      createShellBubbles(); // lav bobler når muslingen åbner
     } else {
       mus.src = "img/musLuk.png";
     }
   });
 }
 
-// De 3 const her, er fordi vi har 3 foreskellige puffer fish i vores HTML :`-) 
+// De 3 const her, er fordi vi har 3 foreskellige puffer fish i vores HTML :`-)
 const puffish = document.getElementById("puffish");
 const puffish2 = document.getElementById("puffish2");
 const puffish3 = document.getElementById("puffish3");
@@ -118,7 +145,3 @@ if (puffish3) {
     }
   });
 }
-
-
-
-
