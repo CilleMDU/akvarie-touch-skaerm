@@ -32,6 +32,9 @@ if (gameMenu) {
 }
 const tang = document.getElementById("seaweed");
 
+const tangSound = new Audio();
+tangSound.src = "audio/gudLyd.mp3";
+
 const tang2Image = new Image();
 // preload tang2 billedet
 tang2Image.src = "img/tang2.png";
@@ -41,6 +44,7 @@ if (tang) {
     // skift mellem tang1.png og tang2.png
     if (tang.src.includes("tang1.png")) {
       tang.src = "img/tang2.png";
+      tangSound.play();
     } else {
       tang.src = "img/tang1.png";
     }
@@ -54,6 +58,7 @@ musOpen.src = "img/musOpen.png";
 
 const musSound = new Audio();
 musSound.src = "audio/burp-kort.mp3";
+
 
 // funktion til at lave bobler fra muslingen
 function createShellBubbles() {
