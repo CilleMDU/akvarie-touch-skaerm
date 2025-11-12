@@ -27,6 +27,7 @@ if (startMascot) {
 
 // lyd til når man dropper fisk
 const coinSound = new Audio("../audio/bobler2.mp3");
+const wrongSound = new Audio("../audio/wrong.wav");
 
 // variabler til spillet
 let score = 0;
@@ -104,19 +105,22 @@ blueBucket.addEventListener("drop", function (event) {
 
   const fishColor = draggedFish.dataset.color;
 
-  if (fishColor === "blue") {
-    // korrekt!
-    coinSound.play();
-    score = score + 1;
-    scoreElement.textContent = score;
-    draggedFish.remove();
-    fishSorted = fishSorted + 1;
+if (fishColor === "blue") {
+  // korrekt!
+  coinSound.play();
+  score = score + 1;
+  scoreElement.textContent = score;
+  draggedFish.remove();
+  fishSorted = fishSorted + 1;
+} else {
+  // forkert farve
+  wrongSound.play();
+}
 
-    // tjek om alle fisk er sorteret
-    if (fishSorted === totalFish) {
-      setTimeout(showWinScreen, 500);
-    }
-  }
+// tjek om alle fisk er sorteret
+if (fishSorted === totalFish) {
+  setTimeout(showWinScreen, 500);
+}
 });
 
 // når jeg slipper fisken i orange spand
@@ -126,19 +130,22 @@ orangeBucket.addEventListener("drop", function (event) {
 
   const fishColor = draggedFish.dataset.color;
 
-  if (fishColor === "orange") {
-    // korrekt!
-    coinSound.play();
-    score = score + 1;
-    scoreElement.textContent = score;
-    draggedFish.remove();
-    fishSorted = fishSorted + 1;
+if (fishColor === "orange") {
+  // korrekt!
+  coinSound.play();
+  score = score + 1;
+  scoreElement.textContent = score;
+  draggedFish.remove();
+  fishSorted = fishSorted + 1;
+} else {
+  // forkert farve
+  wrongSound.play();
+}
 
-    // tjek om alle fisk er sorteret
-    if (fishSorted === totalFish) {
-      setTimeout(showWinScreen, 500);
-    }
-  }
+// tjek om alle fisk er sorteret
+if (fishSorted === totalFish) {
+  setTimeout(showWinScreen, 500);
+}
 });
 
 const winMusic = new Audio();
