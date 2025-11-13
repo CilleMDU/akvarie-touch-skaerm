@@ -9,14 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
       className: "pufpuf",
       navn: "Kuglefisk",
       leveTid: "5-10 år",
-      funFact: "Pikkede kuglefisk kaldes for pindsvinefisk",
+      funFact: "Kuglefisk og delfiner er bedstevenner",
     },
 
     {
       className: "tuxie",
       navn: "Damselfish",
       leveTid: "5-7 år",
-      funFact: "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
+      funFact:
+        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
     },
 
     {
@@ -68,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
 
   //Bagrundsmusik - Cille
 
