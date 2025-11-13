@@ -13,12 +13,6 @@ game 3
 
 // LINE SVENDSEN
 
-Valg af farvepallette + design
-Design af baggrund
-Design af kuglefisk
-Design af musling
-Stemme til maskot 
-
 Musling click event = åben/luk + lyd - Bobler af Sebastian/Line
 Tang og kiste click event = Tang ned/op + lyd - Gult glow fra Sebastian
 Kuglefisk click event = stor/lille + lyd effekter - første lydeffekt tilføjet af Cille
@@ -39,14 +33,13 @@ Fundet og indsat facts om vores valgte fisk til infoboksen
 
 Cecilie Schmidt:
 
-Design af tuxedo damselfish og azure damselfish
-Designet kisten
-GIF af tuxedo, damsel fish, pufferfish flat og pufferfish big
 Animeret alle fiskene på forsiden
 Placeret genstande på forsiden (Kister, musling, tang foran kiste)
 Lavet HTML og CSS af alle fisk og forgrunds objekter
 Lavet klik event/animationer til Tuxedo fisk, juvel fisk, søhest og diskus fisk i JS og CSS
 Lavet informations overlay i JS og CSS
+
+---
 
 Fælles:
 Infokort
