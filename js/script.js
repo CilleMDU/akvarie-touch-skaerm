@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       className: "tuxie",
       navn: "Damselfish",
       leveTid: "5-7 år",
-      funFact:
-        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
+      funFact: "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
     },
 
     {
