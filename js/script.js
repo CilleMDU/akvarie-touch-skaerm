@@ -296,16 +296,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const orangies = document.querySelectorAll(".orangy");
   const bobbles = new Audio();
+  bobbles.src = "audio/bobler1.mp3";
 
   orangies.forEach((orangy) => {
     orangy.addEventListener("click", () => {
       orangy.style.animationDuration = "1s";
-      bobbles.play();
 
       setTimeout(() => {
         orangy.style.animationDuration = "";
       }, 7000);
     });
+    bobbles.play();
   });
 
   const discusFish = document.querySelectorAll(".diskus");
@@ -321,9 +322,8 @@ document.addEventListener("DOMContentLoaded", () => {
         diskus.classList.add("spin-right");
         setTimeout(() => diskus.classList.remove("spin-right"), 2100);
       }
-
-      spinSound.play();
     });
+    spinSound.play();
   });
 
   const seahorses = document.querySelectorAll(".thereHorse");
@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
         thereHorse.classList.add("seahorseHop");
         setTimeout(() => thereHorse.classList.remove("seahorseHop"), 2100);
       }
-      neigh.play();
     });
+    neigh.play();
   });
 });
