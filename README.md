@@ -13,12 +13,6 @@ game 3
 
 // LINE SVENDSEN
 
-Valg af farvepallette + design
-Design af baggrund
-Design af kuglefisk
-Design af musling
-Stemme til maskot 
-
 Musling click event = åben/luk + lyd - Bobler af Sebastian/Line
 Tang og kiste click event = Tang ned/op + lyd - Gult glow fra Sebastian
 Kuglefisk click event = stor/lille + lyd effekter - første lydeffekt tilføjet af Cille
@@ -29,11 +23,8 @@ Rebecca Pedersen:
 
 Designet orange fisk og lavet den til GIF
 Designet blå fisk og lavet den til GIF
-Lavet powerpoint
-Lavet flyer
-Fundet lydfiler
-Foretaget interviews og observationer
-Fundet og indsat facts om vores valgte fisk til infoboksen
+Lydeffekter/filer til fisk
+CSS af
 
 ---
 
