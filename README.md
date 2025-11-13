@@ -31,6 +31,8 @@ Fundet lydfiler
 Foretaget interviews og observationer
 Fundet og indsat facts om vores valgte fisk til infoboksen
 
+---
+
 Cecilie Schmidt:
 
 Design af tuxedo damselfish og azure damselfish
