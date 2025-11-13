@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Diskusfisk",
       leveTid: "8-12 år",
       funFact:
-        "Diskus fisken kaldes for Kongen af Akvariet på grund af dens strålende farver",
+        "Diskusfisken kaldes for kongen af akvariet på grund af dens strålende farver",
     },
 
     {
