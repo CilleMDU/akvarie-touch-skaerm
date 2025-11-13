@@ -5,7 +5,7 @@ Game 1
 styling af bobler
 
 
-Lavet af Line+Sebastian
+Lavet af Line + Sebastian
 Maskot sektioner der snakker.
 Styling af game menu
 game 3
@@ -18,9 +18,8 @@ Musling click event = åben/luk + lyd
 Tang og kiste click event = Tang ned/op + lyd
     - Gult glow fra Sebastian
 
-Kuglefisk click event = stor/lille + lyd
-
-
+Kuglefisk click event = stor/lille + lyd effekter
+    - første lydeffekt tilføjet af Cille
 _______________________________________________
 
 Fælles:
