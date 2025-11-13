@@ -1,13 +1,10 @@
 "use strict";
 
 const dodger = document.getElementById("dodger");
-const coin = document.getElementById("coin");
 const scoreElement = document.getElementById("points");
-const gameoverSound = document.getElementById("gameover");
 let score = 0;
 const startScreen = document.getElementById("startScreen");
 const startButton = document.getElementById("startknap");
-const backgroundMusic = document.getElementById("backgroundMusic");
 const startMascot = document.getElementById("startMascot");
 
 // Maskot animation
@@ -23,6 +20,11 @@ if (startMascot) {
     startMascot.src = "../img/Nemo-fish.png";
   });
 }
+
+const backgroundMusic = new Audio("../audio/meditation.mp3");
+const coinSound = new Audio("../audio/escape.wav");
+const gameoverSound = new Audio("../audio/gameover_sound.m4a");
+
 
 // Funktion til at starte baggrundsmusik
 function playBackgroundMusic() {
@@ -123,7 +125,7 @@ function moveCoinToNewPosition() {
 
 // Lyd funktioner
 function playMovement() {
-  const movement = document.getElementById("movement");
+  const movement = new Audio("../audio/bobler2.mp3");
   if (movement) {
     movement.currentTime = 0;
     movement.play().catch((err) => {});
@@ -163,7 +165,6 @@ function resetGame() {
   dodger.style.left = "180px";
   moveCoinToNewPosition();
   document.getElementById("gameOverScreen").style.display = "none";
-  playBackgroundMusic();
 }
 
 // Event listeners
