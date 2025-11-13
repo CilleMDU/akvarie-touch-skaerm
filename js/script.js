@@ -69,11 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  getFishfacts.addEventListener("click", (e) => {
-    if (e.target.classList.contains("close-btn2")) {
-      getFishfacts.classList.remove("is-visible");
-    }
-  });
 
   //Bagrundsmusik - Cille
 
