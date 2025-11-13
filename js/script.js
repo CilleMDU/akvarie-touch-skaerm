@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Damselfish",
       leveTid: "5-7 år",
       funFact:
-        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
+        "Der findes en meget kendt blå Damselfisk, nemlig Dory fra filmen Find Nemo",
     },
 
     {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Afrikanske Juvel Cichlide",
       leveTid: "7-15 år",
       funFact:
-        "Når en Afrikanske Juvel Cichlide finder en partner, er det for livet",
+        "Når en Afrikanske Juvel Cichlide bliver stresset kan den finde på at spise sine egne unger",
     },
 
     {
