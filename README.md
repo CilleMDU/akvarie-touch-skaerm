@@ -23,16 +23,9 @@ Rebecca Pedersen:
 
 Designet orange fisk og lavet den til GIF
 Designet blå fisk og lavet den til GIF
-<<<<<<< HEAD
 Lydeffekter/filer til fisk
-CSS af
-=======
-Lavet powerpoint
-Lavet flyer
-Fundet lydfiler
-Foretaget interviews og observationer
-Fundet og indsat facts om vores valgte fisk til infoboksen med Cille
->>>>>>> e190712798226b4b9909e3e477191da8b5354d75
+Styling af Nemo intro-skærm samt Nemo fade-in, float og gif
+Styling af game-menu mm.
 
 ---
 
