@@ -23,21 +23,29 @@ Rebecca Pedersen:
 
 Designet orange fisk og lavet den til GIF
 Designet blå fisk og lavet den til GIF
+<<<<<<< HEAD
 Lydeffekter/filer til fisk
 CSS af
+=======
+Lavet powerpoint
+Lavet flyer
+Fundet lydfiler
+Foretaget interviews og observationer
+Fundet og indsat facts om vores valgte fisk til infoboksen med Cille
+>>>>>>> e190712798226b4b9909e3e477191da8b5354d75
 
 ---
 
 Cecilie Schmidt:
 
-Design af tuxedo damselfish og azure damselfish
-Designet kisten
-GIF af tuxedo, damsel fish, pufferfish flat og pufferfish big
 Animeret alle fiskene på forsiden
 Placeret genstande på forsiden (Kister, musling, tang foran kiste)
 Lavet HTML og CSS af alle fisk og forgrunds objekter
 Lavet klik event/animationer til Tuxedo fisk, juvel fisk, søhest og diskus fisk i JS og CSS
 Lavet informations overlay i JS og CSS
+Fundet og indsat facts om vores valgte fisk til infoboksen med Bex
+
+---
 
 Fælles:
 Infokort
