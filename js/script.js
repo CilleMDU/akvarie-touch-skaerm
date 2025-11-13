@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       className: "pufpuf",
       navn: "Kuglefisk",
       leveTid: "5-10 år",
-      funFact: "Kuglefisk og delfiner er bedstevenner",
+      funFact: "Kuglefisken har en sjov bedsteven: delfinen!",
     },
 
     {
