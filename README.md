@@ -8,6 +8,7 @@ styling af bobler
 Lavet af Line+Sebastian
 Maskot sektioner der snakker.
 Styling af game menu
+game 3
 
 Fælles:
 Infokort
