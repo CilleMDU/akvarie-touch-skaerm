@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
       className: "tuxie",
       navn: "Damselfish",
       leveTid: "5-7 år",
-      funFact: "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
+      funFact:
+        "De to typer Damselfish på skærmen kaldes for Azure Damselfish og Tuxedo Damselfish",
     },
 
     {
@@ -60,15 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("." + fish.className).forEach((elem) => {
       elem.addEventListener("click", () => {
         const fishDetails = `
-               <strong>${fish.navn}</strong>
-               <br> Levetid: ${fish.leveTid}
-               <br> Fun fact: ${fish.funFact}
+               <button id="closeMenu2" class="close-btn2">✕</button>
+               <span class="fish-name">${fish.navn}</span>
+               <div><span class="info-label">Levetid:</span> <span class="info-content">${fish.leveTid}</span></div>
+               <div><span class="info-label">Fun fact:</span> <span class="info-content">${fish.funFact}</span></div>
                `;
         showFishfacts(fishDetails);
       });
     });
   });
-
 
   //Bagrundsmusik - Cille
 
