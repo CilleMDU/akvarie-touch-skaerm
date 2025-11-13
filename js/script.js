@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (getFishfacts) {
       getFishfacts.innerHTML = html;
       getFishfacts.classList.add("is-visible");
+      setTimeout(function () {
+        getFishfacts.classList.remove("is-visible");
+      }, 8000);
     }
   }
 
@@ -58,11 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("." + fish.className).forEach((elem) => {
       elem.addEventListener("click", () => {
         const fishDetails = `
-
-              <button id="closeMenu2" class="close-btn2">✕</button>
-               <strong>${fish.navn}</strong><br>
-               Levetid: ${fish.leveTid}<br>
-               Fun fact: ${fish.funFact}
+               <strong>${fish.navn}</strong>
+               <br> Levetid: ${fish.leveTid}
+               <br> Fun fact: ${fish.funFact}
                `;
         showFishfacts(fishDetails);
       });
