@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("." + fish.className).forEach((elem) => {
       elem.addEventListener("click", () => {
         const fishDetails = `
-               <button id="closeMenu2" class="close-btn2">✕</button>
                <span class="fish-name">${fish.navn}</span>
                <div><span class="info-label">Levetid:</span> <span class="info-content">${fish.leveTid}</span></div>
                <div><span class="info-label">Fun fact:</span> <span class="info-content">${fish.funFact}</span></div>
