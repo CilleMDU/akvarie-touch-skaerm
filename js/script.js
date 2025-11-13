@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const orangies = document.querySelectorAll(".orangy");
-  const bobbles = new Audio("../audio/bobler1.mp3");
+  const bobbles = new Audio("/audio/bobler1.mp3");
 
   orangies.forEach((orangy) => {
     orangy.addEventListener("click", () => {
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const discusFish = document.querySelectorAll(".diskus");
-  const spinSound = new Audio("../audio/spinny.wav");
+  const spinSound = new Audio("/audio/spinny.wav");
 
   discusFish.forEach((diskus) => {
     diskus.addEventListener("click", function () {
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const seahorses = document.querySelectorAll(".thereHorse");
   const neigh = new Audio();
-  neigh.src = "audio/seahorseLyd.mp3";
+  neigh.src = "/audio/seahorseLyd.mp3";
 
   seahorses.forEach((thereHorse) => {
     thereHorse.addEventListener("click", function () {
