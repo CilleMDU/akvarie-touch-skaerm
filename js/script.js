@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Afrikanske Juvel Cichlide",
       leveTid: "7-15 år",
       funFact:
-        "Uden for yngle sæson er disse fisk ikke farverige, men i stedet er de olivengrønne",
+        "Når en Afrikanske Juvel Cichlide finder en partner, er det for livet",
     },
 
     {
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Søheste",
       leveTid: "4 år",
       funFact:
-        "Søheste findes i over 11 farvre alt efter området de lever i, deres humør og deres race",
+        "Søheste findes i over 11 farver alt efter området de lever i, deres humør og deres race",
     },
   ];
 
