@@ -739,23 +739,44 @@ header {
 
 .fiskefakta {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
-  border-radius: 35px;
-  background-color: rgba(255, 255, 255, 0.664);
-  font-size: 20px;
-  font-weight: bold;
-  color: #003d7a;
-  padding: 25px 45px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  font-size: 18px;
+  font-weight: normal;
+  color: #2c3e50;
+  padding: 30px 35px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   z-index: 1000;
-  line-height: 2;
-  max-width: min(320px, 90vw);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  line-height: 1.8;
+  max-width: min(380px, 90vw);
   display: none;
-  transform: translateY(8px);
-  transition: opacity 1s ease, transform 0.25s ease;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.fiskefakta .fish-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: #00a8cc;
+  margin-bottom: 15px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fiskefakta .info-label {
+  font-weight: 700;
+  color: #34495e;
+}
+
+.fiskefakta .info-content {
+  font-weight: 400;
+  color: #5a6c7d;
 }
 
 .fiskefakta.is-visible {
@@ -793,7 +814,6 @@ header {
     transform: translateX(calc(-100vw - 200px)) rotateY(1800deg) rotateX(180deg);
   }
 }
-
 
 #seahorse.seahorseHop {
   animation: seahorse 17s linear infinite, seahorseHop 2s ease-out infinite;
@@ -852,7 +872,6 @@ header {
     transform: translateX(calc(100vw + 200px)) translateY(0);
   }
 }
-
 
 @keyframes seahorseHop2 {
   0% {
