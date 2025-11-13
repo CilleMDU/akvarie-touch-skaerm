@@ -27,7 +27,7 @@ Lavet powerpoint
 Lavet flyer
 Fundet lydfiler
 Foretaget interviews og observationer
-Fundet og indsat facts om vores valgte fisk til infoboksen
+Fundet og indsat facts om vores valgte fisk til infoboksen med Cille
 
 ---
 
@@ -38,6 +38,7 @@ Placeret genstande på forsiden (Kister, musling, tang foran kiste)
 Lavet HTML og CSS af alle fisk og forgrunds objekter
 Lavet klik event/animationer til Tuxedo fisk, juvel fisk, søhest og diskus fisk i JS og CSS
 Lavet informations overlay i JS og CSS
+Fundet og indsat facts om vores valgte fisk til infoboksen med Bex
 
 ---
 
