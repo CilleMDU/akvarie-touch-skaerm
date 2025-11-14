@@ -1,11 +1,13 @@
-/* Global styles og reset */
+/* Global styles og reset */ /* Rebecca kode */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Nemo intro skærm */
+/* Nemo intro skærm */ /* Rebecca kode */
+
 .nemo-intro {
   position: fixed;
   bottom: 20px;
@@ -19,11 +21,13 @@
 }
 
 .nemo-intro.fade-out {
+  /* Rebecca kode */
   opacity: 0;
   pointer-events: none;
 }
 
 .nemo-intro-gif {
+  /* Rebecca kode */
   width: 300px;
   height: auto;
   margin-bottom: 30px;
@@ -32,6 +36,7 @@
 }
 
 @keyframes nemoFloat {
+  /* Rebecca kode */
   0%,
   100% {
     transform: translateY(0);
@@ -111,6 +116,7 @@ header {
 }
 
 .game-menu {
+  /* Rebecca kode */
   position: fixed;
   top: 0;
   left: 0;

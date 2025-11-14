@@ -6,8 +6,6 @@ const startButton = document.getElementById("startButton");
 const gameContainer = document.getElementById("gameContainer");
 const gameArea = document.getElementById("gameArea");
 const scoreElement = document.getElementById("points");
-const clickSound = document.getElementById("clickSound");
-const backgroundMusic = document.getElementById("backgroundMusic");
 const startMascot = document.getElementById("startMascot");
 
 // Maskot animation
@@ -38,6 +36,8 @@ const fishImages = [
   "../img/tuxedo-fish.gif",
 ];
 
+const backgroundMusic = new Audio("../audio/meditation.mp3");
+
 // Start spillet
 startButton.addEventListener("click", function () {
   startScreen.style.display = "none";
@@ -51,6 +51,8 @@ function playBackgroundMusic() {
   backgroundMusic.volume = 0.1;
   backgroundMusic.play().catch((err) => console.log("Musik fejl:", err));
 }
+
+const clickSound = new Audio("../audio/bobler2.mp3");
 
 // Lyd når man klikker på fisk
 function playClickSound() {

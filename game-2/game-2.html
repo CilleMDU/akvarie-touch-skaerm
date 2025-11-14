@@ -33,23 +33,6 @@
       <button id="startknap">Start Spil</button>
     </div>
 
-    <!-- Alt lyd der bruges -->
-    <audio id="movement">
-      <source src="/audio/bobler2.mp3" type="audio/mp4" />
-    </audio>
-
-    <audio id="gameover">
-      <source src="/audio/gameover_sound.m4a" type="audio/mp4" />
-    </audio>
-
-    <audio id="coinSound">
-      <source src="/audio/escape.wav" type="audio/mp3" />
-    </audio>
-
-    <audio id="backgroundMusic" loop>
-      <source src="/audio/meditation.mp3" type="audio/mp3" />
-    </audio>
-
     <!-- Game container -->
     <div class="game-container">
       <h1 class="game-title">Akvarie Spillet</h1>
@@ -59,16 +42,7 @@
         <div id="score">Score: <span id="points">0</span></div>
         <div id="dodger"></div>
         <div id="coin">
-          <img
-            src="/img/skrald.png"
-            alt="mad"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 8px;
-            "
-          />
+          <img src="../img/skrald.png" alt="mad">
         </div>
         <div class="structure" id="wall1"></div>
         <div class="structure" id="wall2"></div>

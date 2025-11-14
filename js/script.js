@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Damselfish",
       leveTid: "5-7 år",
       funFact:
-        "Der findes en meget kendt blå Damselfisk, nemlig Dory fra filmen Find Nemo",
+        "Damselfish er nogle kloge fisk der passer alger ligesom en bondemand passer majs",
     },
 
     {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navn: "Afrikanske Juvel Cichlide",
       leveTid: "7-15 år",
       funFact:
-        "Når en Afrikanske Juvel Cichlide bliver stresset kan den finde på at spise sine egne unger",
+        "Den Afrikanske Juvel Cichlide er ikke altid en strålende orange. I visse sæsoner er en mørke grøn",
     },
 
     {
@@ -295,7 +295,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const orangies = document.querySelectorAll(".orangy");
-  const bobbles = new Audio("../audio/bobler1.mp3");
+  const bobbles = new Audio();
+  bobbles.src = "audio/bobler1.mp3";
 
   orangies.forEach((orangy) => {
     orangy.addEventListener("click", () => {
@@ -309,7 +310,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const discusFish = document.querySelectorAll(".diskus");
-  const spinSound = new Audio("../audio/spinny.wav");
+  const spinSound = new Audio();
+  spinSound.src = "audio/spinny.wav";
 
   discusFish.forEach((diskus) => {
     diskus.addEventListener("click", function () {
